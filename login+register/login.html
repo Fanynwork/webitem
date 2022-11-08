@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  a:link {text-decoration:none;background-color: #00e2ff} /* unvisited link */
+  a:visited {text-decoration:none;} /* visited link */
+  a:hover {text-decoration:none;}   /* mouse over link */
+  a:active {text-decoration:underline;}  /* selected link */
+
+  #main{
+    width: 100%;
+    height: 100%;
+    background-image: url("./图片/1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    position:absolute;
+    /*居中摆放*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #transparent_box{
+    width:500px;
+    height:480px;
+    background-color:#ffffff;
+    opacity:0.9;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*去除白边*/
+  body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  /*图标位置调整*/
+  .iconfont_position{
+    margin-left: 60px;
+    padding-bottom: 42px;
+  }
+  /*登录按钮格式*/
+  button{
+    width: 100px;
+    height: 40px;
+    background-color: #eaeef0;
+    font-size: 20px;
+    /*无边框*/
+    border-style: none;
+    border-radius: 20px;
+  }
+  /*文本框格式*/
+  input{
+    width: 320px;
+    height: 30px;
+  }
+  .items{
+    display: flex;
+    flex-direction: row;
+  }
+</style>
+
+<body>
+<div id="main">
+  <div id="transparent_box">
+    <div style="text-align: center">
+      <h1 style="color: #2e5870; font-size: 35px">Login</h1>
+      <img src="./图片/书籍.png" width="80px" height="60px">
+    </div>
+    <form method="post">
+      <div class="iconfont_position">
+        <br><br>
+        <div class="items">
+          <img src="./图片/账号.png" width="36px" height="38px">
+          &nbsp;&nbsp;&nbsp;
+          <input type="text" placeholder="账号">
+        </div>
+        <br><br>
+        <div class="items">
+          <img src="./图片/密码.png" width="38px" height="38px">
+          &nbsp;&nbsp;&nbsp;
+          <input type="password" placeholder="密码">
+        </div>
+      </div>
+      <div style="text-align: center; padding-bottom: 10px">
+        <button type="submit">Let's go</button>
+      </div>
+    </form>
+    <p class="iconfont_position">没有账户,
+      <a href="register.html">立即注册</a>
+    </p>
+  </div>
+</div>
+</body>
+</html>

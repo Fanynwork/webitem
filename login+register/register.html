@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    a:link {text-decoration:none;background-color: #00e2ff} /* unvisited link */
+    a:visited {text-decoration:none;} /* visited link */
+    a:hover {text-decoration:none;}   /* mouse over link */
+    a:active {text-decoration:underline;}  /* selected link */
+
+    #main{
+        width: 100%;
+        height: 100%;
+        background-image: url("./图片/1.jpg");
+        background-repeat: no-repeat;
+        background-size:cover;
+        position:absolute;
+        /*居中摆放*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #transparent_box{
+        width:500px;
+        height:480px;
+        background-color:#ffffff;
+        opacity:0.9;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*去除白边*/
+    body{
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    /*图标位置调整*/
+    .iconfont_position_1{
+        margin-left: 60px;
+        padding-bottom: 6px;
+    }
+    .iconfont_position_2{
+        margin-left: 60px;
+        padding-bottom: 18px;
+    }
+    /*登录按钮格式*/
+    button{
+        width: 100px;
+        height: 40px;
+        background-color: #eaeef0;
+        font-size: 20px;
+        /*无边框*/
+        border-style: none;
+        border-radius: 20px;
+    }
+    /*文本框格式*/
+    input{
+        width: 320px;
+        height: 30px;
+    }
+    .items{
+        display: flex;
+        flex-direction: row;
+    }
+    /*提示字体格式*/
+    .hint_font{
+        font-size: 5px;
+        color: red;
+        margin-left: 55px;
+    }
+</style>
+
+<body>
+<div id="main">
+    <div id="transparent_box">
+        <div style="text-align: center">
+            <h1 style="color: #2e5870; font-size: 35px">Register</h1>
+        </div>
+        <form method="post">
+            <div class="iconfont_position_1">
+                <br><br>
+                <div class="items">
+                    <img src="./图片/账号.png" width="36px" height="38px">
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="text" placeholder="账号">
+                </div>
+                <br>
+                <div class="items">
+                    <img src="./图片/邮箱.png" width="37px" height="34px">
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="text" placeholder="邮箱" id="email" onblur="check_email()">
+                </div>
+                <span id="checkRes1" class="hint_font"></span>
+                <br>
+                <div class="items">
+                    <img src="./图片/密码.png" width="38px" height="38px">
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="password" placeholder="密码" id="pass1" oninput="check_pass_strength()">
+                </div>
+                <span id="checkRes2" class="hint_font"></span>
+                <br>
+                <div class="items">
+                    <img src="./图片/密码.png" width="38px" height="38px">
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="password" placeholder="确认密码" id="pass2" onblur="check_pass_consistency()">
+                </div>
+                <span id="checkRes3" class="hint_font"></span>
+            </div>
+            <div style="text-align: center">
+                <button type="submit">Let's go</button>
+            </div>
+        </form>
+        <p class="iconfont_position_2">已有账户,
+            <a href="login.html">立即登录</a>
+        </p>
+    </div>
+</div>
+<script type="text/javascript" src="checkJS.js"></script>
+</body>
+</html>
